@@ -1,5 +1,7 @@
 # Projeto de Estudos Sobre Servlets
 
+## Meu Primeiro Servlet
+
 Nós usamos o navegador para realizar uma requisição para o Tomcat por meio do protocolo HTTP (no qual o navegador é especialista). 
 
 O navegador envia as informações na requisição HTTP, e o Tomcat reconhece essa requisição e devolve o conteúdo solicitado na reposta HTTP. *O protocolo HTTP funciona sempre na dinâmica de requisição e reposta.*
@@ -46,7 +48,73 @@ Podemos elencar dois pontos principais para trabalharmos com Servlet, o primeiro
 public class MyServlet extends HttpServlet 
 ```
 
-O uso da anotation ```@WebServlet```, por meio dela que poderemos definir um ```urlPatterns```, que é nada mais que o nome do Servlet na URL que utilizaremos no navegador. 
+O uso da anotation ```@WebServlet```, por meio dela que poderemos definir um ```urlPatterns```, que é nada mais que o nome do Servlet na URL que utilizaremos no navegador. E o segundo ponto é o ```@Override``` no método ```service()``` que sempre será chamado automaticamente quando houver uma requisição para o PATH configurado, nele implementamos o retorno de um HTML de exemplo.
 
-E o segundo ponto é o ```@Override``` no método ```service()``` que sempre será chamado automaticamente quando houver uma requisição para o PATH configurado, nele implementamos o retorno de um HTML de exemplo.
+Iremos executar o nosso servidor web, então seguiremos para o navegador, onde digitaremos a URL http://localhost:8080/gerenciador/myServlet devemos ter uma pagina HTML simples com texto "Olá, parabéns você escreveu o primeiro servlets.".
 
+## Métodos GET e POST
+
+Dentro das requisições trabalhamos com os verbos HTTP que especificamente no Servlet são representados e tratados por meio dos métodos "doPost" e "doGet" que são os mais comuns, porém existem outros. A seguir temos a seguinte implementação para representar este comportamento:
+
+```
+package br.com.gerenciador.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Empresa
+ */
+@WebServlet(name = "empresa", urlPatterns = { "/empresa" })
+public class Empresa extends HttpServlet {
+
+	private static final long serialVersionUID = 3090335723980843489L;
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("Executando o método service");
+		super.service(req, resp);
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		System.out.println("Executando o método doGet");
+		response.getWriter().println(
+				"<html><body>Executando o método doGet - QueryString: " + request.getQueryString() + "!</body></html>");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		System.out.println("Executando o método doPost");
+		response.getWriter().println(
+				"<html><body>Empresa " + request.getParameter("nome") + " cadastrada com sucesso!</body></html>");
+	}
+
+}
+
+```
+
+Iremos executar o nosso servidor web, então seguiremos para o navegador, onde digitaremos a URL http://localhost:8080/gerenciador/empresa quando executada via browser por padrão executamos o GET para exeutar uma reqisição do tipo POST é necessario criar um formulario (devidamente implementado) ou usar alguma ferramenta como Postman ou Insominia.
+
+Alguns Links para entendermos melhor verbos HTTP:
+
+- https://restfulapi.net/http-methods/
+- https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
+- https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
