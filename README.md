@@ -1,5 +1,7 @@
 # Projeto de Estudos Sobre Servlets
 
+[![Build Status](https://travis-ci.com/pricardoti/learn-servlets.svg?branch=master)](https://travis-ci.com/pricardoti/learn-servlets)
+
 ## Meu Primeiro Servlet
 
 Nós usamos o navegador para realizar uma requisição para o Tomcat por meio do protocolo HTTP (no qual o navegador é especialista). 
