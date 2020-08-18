@@ -1,5 +1,6 @@
 # Projeto de Estudos Sobre Servlets
 
+[![GitHub license](https://img.shields.io/github/license/pricardoti/learn-servlets)](https://github.com/pricardoti/learn-servlets/blob/master/LICENSE)
 [![Build Status](https://travis-ci.com/pricardoti/learn-servlets.svg?branch=master)](https://travis-ci.com/pricardoti/learn-servlets)
 
 ## Meu Primeiro Servlet
@@ -52,7 +53,7 @@ public class MyServlet extends HttpServlet
 
 O uso da anotation ```@WebServlet```, por meio dela que poderemos definir um ```urlPatterns```, que é nada mais que o nome do Servlet na URL que utilizaremos no navegador. E o segundo ponto é o ```@Override``` no método ```service()``` que sempre será chamado automaticamente quando houver uma requisição para o PATH configurado, nele implementamos o retorno de um HTML de exemplo.
 
-Iremos executar o nosso servidor web, então seguiremos para o navegador, onde digitaremos a URL http://localhost:8080/gerenciador/myServlet devemos ter uma pagina HTML simples com texto "Olá, parabéns você escreveu o primeiro servlets.".
+Iremos executar o nosso servidor web, então seguiremos para o navegador, onde digitaremos a URL http://localhost:8080/gerenciador/myServlet, onde devemos ter uma pagina HTML simples com texto "Olá, parabéns você escreveu o primeiro servlets." como resultado.
 
 ## Métodos GET e POST
 
@@ -113,7 +114,9 @@ public class Empresa extends HttpServlet {
 
 ```
 
-Iremos executar o nosso servidor web, então seguiremos para o navegador, onde digitaremos a URL http://localhost:8080/gerenciador/empresa quando executada via browser por padrão executamos o GET para exeutar uma reqisição do tipo POST é necessario criar um formulario (devidamente implementado) ou usar alguma ferramenta como Postman ou Insominia.
+Iremos executar o nosso servidor web, então seguiremos para o navegador, onde digitaremos a URL http://localhost:8080/gerenciador/empresa. 
+
+Quando uma URL via browser por padrão estamos executamos um GET, para exeutar uma reqisição do tipo POST é necessario criar um formulario (devidamente implementado) ou usar alguma ferramenta como Postman ou Insominia.
 
 Alguns Links para entendermos melhor verbos HTTP:
 
