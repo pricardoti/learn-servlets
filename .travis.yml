@@ -1,5 +1,5 @@
 language: java
-install: ant build
+install: ant build-project
 jdk:
   - openjdk8
 sudo: false
