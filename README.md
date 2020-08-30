@@ -56,7 +56,7 @@ Primeiro o uso da anotation ```@WebServlet```, por meio dela que poderemos defin
 
 E o segundo ponto é o ```@Override``` no método ```service()``` que sempre será chamado automaticamente quando houver uma requisição para o PATH configurado, nele implementamos o retorno de um HTML de exemplo.
 
-Iremos executar o nosso servidor web, então seguiremos para o navegador, onde digitaremos a URL http://localhost:8080/gerenciador/myServlet devemos ter uma pagina HTML simples com texto "Olá, parabéns você escreveu o primeiro servlets.".
+Iremos executar o nosso servidor web, então seguiremos para o navegador, onde digitaremos a URL http://localhost:8080/gerenciador/myServlet, onde devemos ter uma pagina HTML simples com texto "Olá, parabéns você escreveu o primeiro servlets." como resultado.
 
 Uma observação bem importante, é que no mundo HTTP existem duas formas de devolver uma resposta, sendo uma dessas alternativas, o uso do método ```getWriter()``` para devolver um conteúdo HTML. O ```getWriter()``` devolve um objeto chamado ```PrintWriter``` do pacote ```java.io```. 
 
@@ -119,7 +119,9 @@ public class Empresa extends HttpServlet {
 
 ```
 
-Iremos executar o nosso servidor web, então seguiremos para o navegador, onde digitaremos a URL http://localhost:8080/gerenciador/empresa quando executada via browser por padrão executamos o GET para exeutar uma reqisição do tipo POST é necessario criar um formulario (devidamente implementado) ou usar alguma ferramenta como Postman ou Insominia.
+Iremos executar o nosso servidor web, então seguiremos para o navegador, onde digitaremos a URL http://localhost:8080/gerenciador/empresa. 
+
+Quando uma URL via browser por padrão estamos executamos um GET, para exeutar uma reqisição do tipo POST é necessario criar um formulario (devidamente implementado) ou usar alguma ferramenta como Postman ou Insominia.
 
 Alguns Links para entendermos melhor verbos HTTP:
 
