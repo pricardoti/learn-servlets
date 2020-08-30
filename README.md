@@ -1,7 +1,6 @@
 # Projeto de Estudos Sobre Servlets
 
 [![GitHub license](https://img.shields.io/github/license/pricardoti/learn-servlets)](https://github.com/pricardoti/learn-servlets/blob/master/LICENSE)
-
 [![Build Status](https://travis-ci.com/pricardoti/learn-servlets.svg?branch=master)](https://travis-ci.com/pricardoti/learn-servlets)
 
 ## Meu Primeiro Servlet
