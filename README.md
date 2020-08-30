@@ -1,5 +1,7 @@
 # Projeto de Estudos Sobre Servlets
 
+[![GitHub license](https://img.shields.io/github/license/pricardoti/learn-servlets)](https://github.com/pricardoti/learn-servlets/blob/master/LICENSE)
+
 [![Build Status](https://travis-ci.com/pricardoti/learn-servlets.svg?branch=master)](https://travis-ci.com/pricardoti/learn-servlets)
 
 ## Meu Primeiro Servlet
@@ -50,9 +52,13 @@ Podemos elencar dois pontos principais para trabalharmos com Servlet, o primeiro
 public class MyServlet extends HttpServlet 
 ```
 
-O uso da anotation ```@WebServlet```, por meio dela que poderemos definir um ```urlPatterns```, que é nada mais que o nome do Servlet na URL que utilizaremos no navegador. E o segundo ponto é o ```@Override``` no método ```service()``` que sempre será chamado automaticamente quando houver uma requisição para o PATH configurado, nele implementamos o retorno de um HTML de exemplo.
+Primeiro o uso da anotation ```@WebServlet```, por meio dela que poderemos definir um ```urlPatterns```, que é nada mais que o nome do Servlet na URL que utilizaremos no navegador. 
+
+E o segundo ponto é o ```@Override``` no método ```service()``` que sempre será chamado automaticamente quando houver uma requisição para o PATH configurado, nele implementamos o retorno de um HTML de exemplo.
 
 Iremos executar o nosso servidor web, então seguiremos para o navegador, onde digitaremos a URL http://localhost:8080/gerenciador/myServlet devemos ter uma pagina HTML simples com texto "Olá, parabéns você escreveu o primeiro servlets.".
+
+Uma observação bem importante, é que no mundo HTTP existem duas formas de devolver uma resposta, sendo uma dessas alternativas, o uso do método ```getWriter()``` para devolver um conteúdo HTML. O ```getWriter()``` devolve um objeto chamado ```PrintWriter``` do pacote ```java.io```. 
 
 ## Métodos GET e POST
 
