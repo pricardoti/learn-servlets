@@ -138,7 +138,7 @@ Uma pagina JSP possui extensão ```.jsp``` e consiste em uma página com codific
 
 Na tecnologia JavaServer Pages (JSP), um scriptlet (que vem da palavra em inglês script, que significa "roteiro" ou tecnicamente falando, um pedaço de código em linguagem script, e do sufixo let, que indica o diminutivo, ou seja pequeno script ou scriptzinho) é um pedaço de código Java embutido em um código JSP semelhante a um código HTML. O scriptlet é todo o conteúdo que está dentro das tags ```<% %>```. Entre elas o usuário pode adicionar qualquer scriptelt válido, isto é, qualquer código Java.
 
-*Fonte: ![wikipedia - Scriptlet](https://pt.wikipedia.org/wiki/Scriptlet#:~:text=Na%20tecnologia%20JavaServer%20Pages%20(JSP,embutido%20em%20um%20c%C3%B3digo%20JSP)*
+*Fonte: [Wikipedia Scriptlet](https://pt.wikipedia.org/wiki/Scriptlet)*
 
 ### JSTL - JavaServer Pages Standard Tag Library
 
@@ -146,4 +146,4 @@ A JavaServer Pages Standard Tag Library (JSTL) encapsula, como tags simples, a f
 
 JSTL tem suporte para tarefas estruturais comuns, como iteração e condicionais, tags para manipulação de documentos XML, internacionalização e tags de formatação com distinção de local e tags SQL. Ele também apresenta uma nova linguagem de expressão para simplificar o desenvolvimento da página e fornece uma API para os desenvolvedores simplificar a configuração de tags JSTL e o desenvolvimento de tags customizadas que estão em conformidade com as convenções JSTL. 
 
-*Fonte: ![JSTL Documentation](https://www.oracle.com/java/technologies/jstl-documentation.html)*
+*Fonte: [JSTL Documentation](https://www.oracle.com/java/technologies/jstl-documentation.html)*
