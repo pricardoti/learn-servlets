@@ -127,3 +127,23 @@ Alguns Links para entendermos melhor verbos HTTP:
 - https://restfulapi.net/http-methods/
 - https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
 - https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
+
+## JSP - JavaServer Pages
+
+JSP é o acrônimo para Java Server Pages, uma linguagem criada pela SUN gratuita, JSP é uma linguagem de script com especificação aberta que tem como objetivo primário a geração de conteúdo dinâmico para páginas da Internet.
+
+Uma pagina JSP possui extensão ```.jsp``` e consiste em uma página com codificação HTML e com codificação Java, inserida entre as tag´s ```<% e %>```, que são chamdas de **scriptlets**.
+
+### Scriptlet
+
+Na tecnologia JavaServer Pages (JSP), um scriptlet (que vem da palavra em inglês script, que significa "roteiro" ou tecnicamente falando, um pedaço de código em linguagem script, e do sufixo let, que indica o diminutivo, ou seja pequeno script ou scriptzinho) é um pedaço de código Java embutido em um código JSP semelhante a um código HTML. O scriptlet é todo o conteúdo que está dentro das tags ```<% %>```. Entre elas o usuário pode adicionar qualquer scriptelt válido, isto é, qualquer código Java.
+
+*Fonte: ![wikipedia - Scriptlet](https://pt.wikipedia.org/wiki/Scriptlet#:~:text=Na%20tecnologia%20JavaServer%20Pages%20(JSP,embutido%20em%20um%20c%C3%B3digo%20JSP)*
+
+### JSTL - JavaServer Pages Standard Tag Library
+
+A JavaServer Pages Standard Tag Library (JSTL) encapsula, como tags simples, a funcionalidade central comum a muitos aplicativos JSP. Por exemplo, em vez de sugerir que você itere em listas usando um scriptlet ou diferentes tags de iteração de vários fornecedores, o JSTL define uma tag padrão que funciona da mesma forma em todos os lugares. Essa padronização permite aprender uma única tag e usá-la em vários contêineres JSP.
+
+JSTL tem suporte para tarefas estruturais comuns, como iteração e condicionais, tags para manipulação de documentos XML, internacionalização e tags de formatação com distinção de local e tags SQL. Ele também apresenta uma nova linguagem de expressão para simplificar o desenvolvimento da página e fornece uma API para os desenvolvedores simplificar a configuração de tags JSTL e o desenvolvimento de tags customizadas que estão em conformidade com as convenções JSTL. 
+
+*Fonte: ![JSTL Documentation](https://www.oracle.com/java/technologies/jstl-documentation.html)*
